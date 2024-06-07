@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    tools:context="com.elena.my_wardrobe.ui.LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:background="@drawable/rounded"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginVertical="10dp"
+        android:src="@drawable/ic_logo"
+        app:tint="@color/primary"
+        android:scaleType="fitCenter"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_margin="5dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/login"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:gravity="center"
+
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/login_google"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_google"
+            app:tint="@color/primary"
+            android:scaleType="centerCrop"
+            style="@style/Widget.MaterialComponents.Button"
+            />
+        <ImageButton
+            android:id="@+id/login_facebook"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_facebook"
+            app:tint="@color/primary"
+            android:scaleType="centerCrop"
+            style="@style/Widget.MaterialComponents.Button"
+            />
+
+        <ImageButton
+            android:id="@+id/login_guest"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_anonymous"
+            app:tint="@color/primary"
+            android:scaleType="centerCrop"
+            style="@style/Widget.MaterialComponents.Button"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chooselogin"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/primary"
+        android:layout_marginHorizontal="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/primary"
+        app:endIconMode="password_toggle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <CheckBox
+        android:id="@+id/remember_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:text="@string/remember_me"/>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"
+        android:text="@string/login_button"
+        android:backgroundTint="@color/secondary"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/locale_mk"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_flag_mk"
+            style="@style/Widget.MaterialComponents.Button"
+            />
+        <ImageButton
+            android:id="@+id/locale_en"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_flag_gb"
+            style="@style/Widget.MaterialComponents.Button"
+            />
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

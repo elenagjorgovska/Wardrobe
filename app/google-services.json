@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "301219803682",
+    "project_id": "mywardrobe-a3120",
+    "storage_bucket": "mywardrobe-a3120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301219803682:android:735bd68c23edfa80fe907b",
+        "android_client_info": {
+          "package_name": "com.elena.mywardrobe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdnEdx4tb8q0cGtrLbAtoQ0UL_v4WFPH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,56 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a2962e71da4fece942b435b24f58ed45",
+    "entities": [
+      {
+        "tableName": "outfits",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`outfitID` INTEGER PRIMARY KEY AUTOINCREMENT, `rName` TEXT NOT NULL, `rDesc` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "outfitID",
+            "columnName": "outfitID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rName",
+            "columnName": "rName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rDesc",
+            "columnName": "rDesc",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "outfitID"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_outfits_rName",
+            "unique": true,
+            "columnNames": [
+              "rName"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_outfits_rName` ON `${TABLE_NAME}` (`rName`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a2962e71da4fece942b435b24f58ed45')"
+    ]
+  }
+}

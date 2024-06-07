@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyWardrobe</string>
+    <string name="title_home">Почетна</string>
+    <string name="title_addNew">Додај</string>
+    <string name="title_settings">Опции</string>
+    <string name="email">Внеси email</string>
+    <string name="password">Внеси лозинка</string>
+    <string name="login">Најава преку</string>
+    <string name="login_button">Најава</string>
+    <string name="select_lang">Избери Јазик</string>
+    <string name="chooselogin">или</string>
+    <string name="description">Додај Опис</string>
+    <string name="ingredients">Внеси Облека</string>
+    <string name="recipetitle">Внеси Наслов</string>
+    <string name="addnewtitle">Внеси Нов Outfit</string>
+    <string name="remember_me">Запомни Ме</string>
+    <string name="title_favorites">Зачувани</string>
+</resources>

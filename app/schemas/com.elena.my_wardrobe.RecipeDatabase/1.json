@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "cc2a419b6f686cc360cead5984e4f816",
+    "entities": [
+      {
+        "tableName": "recipes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipeID` INTEGER PRIMARY KEY AUTOINCREMENT, `rName` TEXT NOT NULL, `rDesc` TEXT NOT NULL, `rIngredients` TEXT NOT NULL, `rAuth` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "recipeID",
+            "columnName": "recipeID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rName",
+            "columnName": "rName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rDesc",
+            "columnName": "rDesc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rIngredients",
+            "columnName": "rIngredients",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rAuth",
+            "columnName": "rAuth",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "recipeID"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recipes_rName",
+            "unique": true,
+            "columnNames": [
+              "rName"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recipes_rName` ON `${TABLE_NAME}` (`rName`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'cc2a419b6f686cc360cead5984e4f816')"
+    ]
+  }
+}
