@@ -3,10 +3,8 @@ package com.elena.my_wardrobe
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.elena.my_wardrobe.ui.LoginActivity
 import com.elena.mywardrobe.R
 import com.elena.my_wardrobe.ui.dashboard.AddFragment
 import com.elena.my_wardrobe.ui.home.HomeFragment
