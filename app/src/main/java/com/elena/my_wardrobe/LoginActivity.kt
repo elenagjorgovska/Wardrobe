@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(com.elena.mywardrobe.R.string.login))
+            .requestIdToken(getString(com.elena.mywardrobe.R.string.default_web_client_id))
             .requestEmail()
             .build()
 
@@ -254,7 +254,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "signInWithEmail:success")
+                    Log.d("AUTH",  auth!!.getAccessToken(true).toString())
                     val user = auth.currentUser
                     updateUI(user)
                 } else {

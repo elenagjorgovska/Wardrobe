@@ -62,7 +62,12 @@
             android:layout_height="60dp"
             android:layout_marginHorizontal="10dp"
             android:orientation="horizontal">
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/recipe_author"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/authorName"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_weight="1"

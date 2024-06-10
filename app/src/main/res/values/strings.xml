@@ -9,7 +9,7 @@
     <string name="email">Enter your email</string>
     <string name="password">Enter your password</string>
     <string name="login">Login with</string>
-    <!--    <string name="default_web_client_id" translatable="false">627965274843-k7v744n0rgidqmtu2gdfc7lbnlroeiam.apps.googleusercontent.com</string>-->
+        <string name="default_web_client_id" translatable="false">627965274843-k7v744n0rgidqmtu2gdfc7lbnlroeiam.apps.googleusercontent.com</string>
     <string name="login_button">Login</string>
     <string name="login_google" translatable="false">Google</string>
     <string name="login_facebook" translatable="false">Facebook</string>

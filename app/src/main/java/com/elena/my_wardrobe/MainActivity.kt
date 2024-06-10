@@ -11,6 +11,7 @@ import com.elena.my_wardrobe.ui.home.HomeFragment
 import com.elena.my_wardrobe.ui.notifications.FavoritesFragment
 import com.elena.mywardrobe.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -71,5 +72,6 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.nav_host_fragment_activity_main, fragment)
             .commit()
     }
+
 
 }

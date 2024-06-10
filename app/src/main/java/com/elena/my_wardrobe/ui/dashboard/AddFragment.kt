@@ -15,6 +15,7 @@ import com.elena.my_wardrobe.ui.home.HomeFragment
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+
 class AddFragment : Fragment() {
 
     private var _binding: FragmentAddBinding? = null
