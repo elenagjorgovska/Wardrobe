@@ -16,6 +16,7 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import com.elena.mywardrobe.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
@@ -67,10 +68,10 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         ii.action = "actionstring" + System.currentTimeMillis()
         ii.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
         val pi =
-            PendingIntent.getActivity(context, 0, ii, PendingIntent.FLAG_UPDATE_CURRENT)
+            PendingIntent.getActivity(context, 0, ii, PendingIntent.FLAG_IMMUTABLE)
         val notification: Notification
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            //Log.e("Notification", "Created in up to orio OS device");
+            Log.e("Notification", "Created in up to orio OS device");
             notification = NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
                 .setOngoing(true)
                 .setSmallIcon(getNotificationIcon())
@@ -82,15 +83,21 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setWhen(System.currentTimeMillis())
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setContentTitle(title).build()
-            val notificationManager = context.getSystemService(
-                Context.NOTIFICATION_SERVICE
-            ) as NotificationManager
             val notificationChannel = NotificationChannel(
                 NOTIFICATION_CHANNEL_ID,
                 title,
-                NotificationManager.IMPORTANCE_DEFAULT
+                NotificationManager.IMPORTANCE_HIGH
             )
+            val appContext = context
+            val notificationManager: NotificationManager = appContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(notificationChannel)
+
+
+            notificationManager.createNotificationChannels(listOf(notificationChannel))
+//            val notificationManager = context.getSystemService(
+//                Context.NOTIFICATION_SERVICE
+//            ) as NotificationManager
+
             notificationManager.notify(NOTIFICATION_ID, notification)
         } else {
             notification = NotificationCompat.Builder(context)
@@ -110,8 +117,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     private fun getNotificationIcon(): Int {
         val useWhiteIcon =
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
-        //return if (useWhiteIcon) R.mipmap.ic_launcher else R.mipmap.ic_launcher
-        return 0
+        return if (useWhiteIcon) R.mipmap.ic_launcher else R.mipmap.ic_launcher
+//        return 0
     }
 
 }

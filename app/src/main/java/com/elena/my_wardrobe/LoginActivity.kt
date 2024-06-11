@@ -136,8 +136,8 @@ class LoginActivity : AppCompatActivity() {
                     myEdit.putString("password", password)
                     myEdit.apply()
                 }
-
-
+                var token = FirebaseAuth.getInstance().currentUser!!.getIdToken(true)
+                Log.e("TOKEN", token.toString())
                 signIn(email, password)
             }else{
                 Toast.makeText(this, "Enter valid login details", Toast.LENGTH_SHORT).show()
